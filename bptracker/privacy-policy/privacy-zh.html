@@ -4,209 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>隱私權政策 — 我的血壓日記</title>
+  <link rel="stylesheet" href="main.css">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg:         #ffffff;
-      --surface:    #f5f5f7;
-      --border:     #d2d2d7;
-      --text-h:     #1d1d1f;
-      --text-body:  #3a3a3c;
-      --text-muted: #6e6e73;
-      --accent:     #0066cc;
-      --accent-bg:  #e8f0fb;
-      --chip-bg:    #e8f5e9;
-      --chip-text:  #1b5e20;
-      --radius:     16px;
-    }
-
     body {
-      background: var(--bg);
-      color: var(--text-body);
       font-family: -apple-system, BlinkMacSystemFont, 'PingFang TC', 'Noto Sans TC', sans-serif;
       font-size: 17px;
       line-height: 1.85;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ── 頂部橫幅 ─────────────────────────── */
-    .hero {
-      background: linear-gradient(135deg, #1d2b4f 0%, #0a6cbc 100%);
-      padding: 56px 24px 52px;
-      text-align: center;
-      color: #fff;
-    }
-    .hero .icon {
-      font-size: 52px;
-      margin-bottom: 14px;
-      display: block;
-    }
-    .hero h1 {
-      font-size: 30px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      margin-bottom: 8px;
-    }
-    .hero p {
-      font-size: 15px;
-      opacity: 0.8;
-      margin-bottom: 4px;
-    }
-
-    /* ── 主文區 ────────────────────────────── */
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 40px 24px 80px;
-    }
-
-    /* ── 安全保證醒目框 ─────────────────────── */
-    .guarantee {
-      background: var(--chip-bg);
-      border-left: 5px solid #2e7d32;
-      border-radius: var(--radius);
-      padding: 22px 24px;
-      margin-bottom: 40px;
-    }
-    .guarantee .g-title {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--chip-text);
-      margin-bottom: 10px;
-    }
-    .guarantee ul {
-      padding-left: 24px;
-    }
-    .guarantee ul li {
-      color: var(--chip-text);
-      font-weight: 500;
-      margin-bottom: 6px;
-    }
-
-    /* ── 章節 ──────────────────────────────── */
-    section {
-      margin-bottom: 40px;
-    }
-    section h2 {
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--text-h);
-      margin-bottom: 14px;
-      padding-bottom: 10px;
-      border-bottom: 1.5px solid var(--border);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    section h2 .num {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 30px;
-      height: 30px;
-      background: var(--accent);
-      color: #fff;
-      border-radius: 50%;
-      font-size: 14px;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    p { margin-bottom: 14px; }
-    p:last-child { margin-bottom: 0; }
-
-    ul {
-      padding-left: 24px;
-      margin-bottom: 14px;
-    }
-    ul li {
-      margin-bottom: 8px;
-    }
-
-    /* ── 資訊卡片 ──────────────────────────── */
-    .info-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 20px 22px;
-      margin: 14px 0;
-    }
-    .info-card .card-title {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--text-h);
-      margin-bottom: 8px;
-    }
-    .info-card p {
-      font-size: 15px;
-      color: var(--text-body);
-      margin-bottom: 0;
-    }
-
-    /* ── 重要提示框 ─────────────────────────── */
-    .callout {
-      background: var(--accent-bg);
-      border-left: 4px solid var(--accent);
-      border-radius: var(--radius);
-      padding: 18px 20px;
-      margin: 14px 0;
-    }
-    .callout p { font-size: 15px; color: #004499; margin-bottom: 0; }
-
-    /* ── 聯絡區塊 ──────────────────────────── */
-    .contact-block {
-      text-align: center;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 32px 24px;
-    }
-    .contact-block .contact-icon { font-size: 40px; margin-bottom: 12px; }
-    .contact-block h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; color: var(--text-h); }
-    .contact-block p { font-size: 15px; color: var(--text-muted); }
-    .contact-block a {
-      display: inline-block;
-      margin-top: 16px;
-      background: var(--accent);
-      color: #fff;
-      text-decoration: none;
-      padding: 13px 28px;
-      border-radius: 980px;
-      font-size: 16px;
-      font-weight: 600;
-    }
-    .contact-block a:hover { background: #004ea8; }
-
-    /* ── 頁尾 ──────────────────────────────── */
-    footer {
-      text-align: center;
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-top: 60px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-    }
-    footer a { color: var(--accent); text-decoration: none; }
-
-    /* ── 語言切換 ──────────────────────────── */
-    .lang-switch {
-      text-align: right;
-      margin-bottom: 24px;
-    }
-    .lang-switch a {
-      font-size: 14px;
-      color: var(--accent);
-      text-decoration: none;
-      border: 1px solid var(--accent);
-      padding: 5px 14px;
-      border-radius: 980px;
-    }
-
-    @media (max-width: 480px) {
-      .hero h1 { font-size: 24px; }
-      .container { padding: 28px 18px 64px; }
-      section h2 { font-size: 19px; }
     }
   </style>
 </head>
@@ -223,9 +26,11 @@
 <div class="container">
 
   <!-- 語言切換 -->
-  <div class="lang-switch">
-    <a href="privacy-en.html">English Version</a>
-  </div>
+  <nav class="lang-selector">
+    <a href="privacy-en.html" class="lang-link">English</a>
+    <a href="privacy-zh.html" class="lang-link active">繁體中文</a>
+    <!-- 未來可在此增加其他語系 -->
+  </nav>
 
   <!-- 安全保證 -->
   <div class="guarantee">
@@ -270,7 +75,7 @@
 
     <div class="info-card">
       <p class="card-title">☁️ iCloud 同步（CloudKit）</p>
-      <p>若您的裝置已登入 Apple ID 並開啟 iCloud，資料可透過 Apple CloudKit 在您的多部裝置間同步。這個同步由 <strong>Apple 的加密基礎設施</strong>負責管理，開發者無法讀取或存取 CloudKit 中的任何內容。</p>
+      <p>若您的裝置已登入 Apple IDbing 開啟 iCloud，資料可透過 Apple CloudKit 在您的多部裝置間同步。這個同步由 <strong>Apple 的加密基礎設施</strong>負責管理，開發者無法讀取或存取 CloudKit 中的任何內容。</p>
     </div>
 
     <div class="info-card">
@@ -332,15 +137,12 @@
       <div class="contact-icon">✉️</div>
       <h3>有任何問題嗎？</h3>
       <p>如果您對本隱私權政策或資料處理方式有任何疑問，<br>歡迎隨時透過 Email 與我們聯繫。</p>
-      <a href="mailto:tuna.ryu.dev+ios@gmail.com">tuna.ryu.dev+ios@gmail.com</a>
+      <a class="email-btn" href="mailto:tuna.ryu.dev+ios@gmail.com">tuna.ryu.dev+ios@gmail.com</a>
     </div>
   </section>
 
   <footer>
     <p>© 2026 個人獨立開發者 · 我的血壓日記 (My BP Diary)</p>
-    <p style="margin-top: 6px;">
-      <a href="privacy-en.html">English Version</a>
-    </p>
   </footer>
 
 </div><!-- /container -->
