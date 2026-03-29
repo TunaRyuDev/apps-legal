@@ -18,12 +18,14 @@
 
 <div class="container">
 
-  <!-- Language Switcher -->
-  <nav class="lang-selector">
-    <a href="privacy-en.html" class="lang-link active">English</a>
-    <a href="privacy-zh.html" class="lang-link">繁體中文</a>
-    <!-- Add more languages here in the future -->
-  </nav>
+  <!-- Language Switcher Dropdown -->
+  <div class="lang-selector-container">
+    <select class="lang-dropdown" onchange="window.location.href=this.value">
+      <option value="privacy-en.html" selected>English</option>
+      <option value="privacy-zh.html">繁體中文</option>
+      <!-- Add more languages here in the future -->
+    </select>
+  </div>
 
   <!-- Safety guarantee -->
   <div class="guarantee">

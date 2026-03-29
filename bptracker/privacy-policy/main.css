@@ -54,34 +54,37 @@ body {
   padding: 40px 24px 80px;
 }
 
-/* ── Language Switcher Component ──────────── */
-.lang-selector {
+/* ── Language Selector Dropdown ──────────── */
+.lang-selector-container {
   display: flex;
   justify-content: flex-end;
-  gap: 12px;
   margin-bottom: 32px;
-  flex-wrap: wrap;
 }
 
-.lang-link {
-  font-size: 14px;
+.lang-dropdown {
+  background: var(--bg);
   color: var(--accent);
-  text-decoration: none;
-  border: 1px solid var(--accent);
-  padding: 6px 16px;
+  border: 1.5px solid var(--accent);
+  padding: 8px 32px 8px 16px;
   border-radius: 980px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  appearance: none; /* Remove default arrow */
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%230066cc' d='M2.1 3.9l3.9 3.9 3.9-3.9 1.1 1.1-5 5-5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
   transition: all 0.2s ease;
-  background: transparent;
+  outline: none;
 }
 
-.lang-link:hover {
-  background: var(--accent-bg);
+.lang-dropdown:hover {
+  background-color: var(--accent-bg);
 }
 
-.lang-link.active {
-  background: var(--accent);
-  color: #fff;
-  cursor: default;
+.lang-dropdown:focus {
+  box-shadow: 0 0 0 4px var(--accent-bg);
 }
 
 /* ── Safety guarantee ───────────────────── */
@@ -217,3 +220,57 @@ footer a { color: var(--accent); text-decoration: none; }
   .container { padding: 28px 18px 64px; }
   section h2 { font-size: 19px; }
 }
+
+/* ── Terms: Medical Disclaimer (Conspicuous Legal Notice) ── */
+.medical-disclaimer {
+  background: #fff8e1;
+  border: 2.5px solid #f9a825;
+  border-radius: var(--radius);
+  padding: 24px 26px;
+  margin-bottom: 40px;
+}
+.medical-disclaimer .disclaimer-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.medical-disclaimer .disclaimer-header .badge {
+  background: #f9a825;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 980px;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+.medical-disclaimer .disclaimer-header strong {
+  font-size: 18px;
+  color: #5d4037;
+}
+.medical-disclaimer p {
+  color: #5d4037;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.medical-disclaimer p:last-child { margin-bottom: 0; }
+.medical-disclaimer ul { padding-left: 24px; }
+.medical-disclaimer ul li {
+  color: #5d4037;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* ── Terms: Prohibited Use Warning Box ── */
+.restrict-box {
+  background: #fce4ec;
+  border-left: 5px solid #c62828;
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin: 14px 0;
+}
+.restrict-box p { font-size: 15px; color: #b71c1c; font-weight: 500; margin-bottom: 0; }
+.restrict-box ul { padding-left: 24px; margin-top: 10px; }
+.restrict-box ul li { color: #b71c1c; font-weight: 500; margin-bottom: 6px; }

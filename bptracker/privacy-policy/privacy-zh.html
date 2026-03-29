@@ -25,12 +25,13 @@
 
 <div class="container">
 
-  <!-- 語言切換 -->
-  <nav class="lang-selector">
-    <a href="privacy-en.html" class="lang-link">English</a>
-    <a href="privacy-zh.html" class="lang-link active">繁體中文</a>
-    <!-- 未來可在此增加其他語系 -->
-  </nav>
+  <!-- 語言切換選單 -->
+  <div class="lang-selector-container">
+    <select class="lang-dropdown" onchange="window.location.href=this.value">
+      <option value="privacy-en.html">English</option>
+      <option value="privacy-zh.html" selected>繁體中文</option>
+    </select>
+  </div>
 
   <!-- 安全保證 -->
   <div class="guarantee">
