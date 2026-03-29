@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — My BP Diary</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #ffffff;
+      --surface:    #f5f5f7;
+      --border:     #d2d2d7;
+      --text-h:     #1d1d1f;
+      --text-body:  #3a3a3c;
+      --text-muted: #6e6e73;
+      --accent:     #0066cc;
+      --accent-bg:  #e8f0fb;
+      --chip-bg:    #e8f5e9;
+      --chip-text:  #1b5e20;
+      --radius:     16px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text-body);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Hero banner ─────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, #1d2b4f 0%, #0a6cbc 100%);
+      padding: 56px 24px 52px;
+      text-align: center;
+      color: #fff;
+    }
+    .hero .icon {
+      font-size: 52px;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .hero h1 {
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    .hero p {
+      font-size: 15px;
+      opacity: 0.8;
+      margin-bottom: 4px;
+    }
+
+    /* ── Container ──────────────────────────── */
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* ── Safety guarantee ───────────────────── */
+    .guarantee {
+      background: var(--chip-bg);
+      border-left: 5px solid #2e7d32;
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      margin-bottom: 40px;
+    }
+    .guarantee .g-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--chip-text);
+      margin-bottom: 10px;
+    }
+    .guarantee ul {
+      padding-left: 24px;
+    }
+    .guarantee ul li {
+      color: var(--chip-text);
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    /* ── Sections ───────────────────────────── */
+    section {
+      margin-bottom: 40px;
+    }
+    section h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-h);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    section h2 .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    p { margin-bottom: 14px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      padding-left: 24px;
+      margin-bottom: 14px;
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    /* ── Info cards ─────────────────────────── */
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      margin: 14px 0;
+    }
+    .info-card .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-h);
+      margin-bottom: 8px;
+    }
+    .info-card p {
+      font-size: 15px;
+      color: var(--text-body);
+      margin-bottom: 0;
+    }
+
+    /* ── Callout ────────────────────────────── */
+    .callout {
+      background: var(--accent-bg);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      margin: 14px 0;
+    }
+    .callout p { font-size: 15px; color: #004499; margin-bottom: 0; }
+
+    /* ── Contact block ──────────────────────── */
+    .contact-block {
+      text-align: center;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 24px;
+    }
+    .contact-block .contact-icon { font-size: 40px; margin-bottom: 12px; }
+    .contact-block h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; color: var(--text-h); }
+    .contact-block p { font-size: 15px; color: var(--text-muted); }
+    .contact-block a.email-btn {
+      display: inline-block;
+      margin-top: 16px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      padding: 13px 28px;
+      border-radius: 980px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .contact-block a.email-btn:hover { background: #004ea8; }
+
+    /* ── Footer ─────────────────────────────── */
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    /* ── Lang switch ────────────────────────── */
+    .lang-switch {
+      text-align: right;
+      margin-bottom: 24px;
+    }
+    .lang-switch a {
+      font-size: 14px;
+      color: var(--accent);
+      text-decoration: none;
+      border: 1px solid var(--accent);
+      padding: 5px 14px;
+      border-radius: 980px;
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 24px; }
+      .container { padding: 28px 18px 64px; }
+      section h2 { font-size: 19px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Hero -->
+<div class="hero">
+  <span class="icon">🩺</span>
+  <h1>Privacy Policy</h1>
+  <p>My BP Diary — 我的血壓日記</p>
+  <p>Independent Developer &nbsp;·&nbsp; Effective Date: March 29, 2026</p>
+</div>
+
+<div class="container">
+
+  <!-- Language switch -->
+  <div class="lang-switch">
+    <a href="privacy-zh.html">繁體中文版</a>
+  </div>
+
+  <!-- Safety guarantee -->
+  <div class="guarantee">
+    <p class="g-title">✅ Our Core Privacy Commitment</p>
+    <ul>
+      <li>We <strong>never</strong> collect, access, or transmit your health or medical data</li>
+      <li>All physiological data is stored <strong>exclusively on your device and your iCloud account</strong></li>
+      <li>The developer is <strong>technically incapable</strong> of accessing any of your personal information</li>
+    </ul>
+  </div>
+
+  <!-- 1. Introduction -->
+  <section>
+    <h2><span class="num">1</span>Introduction</h2>
+    <p><strong>My BP Diary</strong> (also known as 我的血壓日記) is developed and maintained by an independent individual developer. This application is designed to help you conveniently record and track blood pressure measurements for personal health awareness.</p>
+    <p>This Privacy Policy explains how we treat your information — and more importantly, how we do <strong>not</strong> collect it. Please read this document carefully to understand our practices regarding any information related to your use of this application.</p>
+  </section>
+
+  <!-- 2. Information We Collect -->
+  <section>
+    <h2><span class="num">2</span>Information We Collect</h2>
+    <div class="callout">
+      <p>📌 <strong>My BP Diary does not collect, store on remote servers, or transmit any personal health data.</strong> All blood pressure readings, pulse rates, dates, and notes you enter remain entirely on your device. The developer has no access to this information at any time.</p>
+    </div>
+    <p>This application does <strong>not</strong> use any of the following:</p>
+    <ul>
+      <li>Advertising tracking or behavioral analytics (e.g., Meta Pixel, Google Analytics)</li>
+      <li>Crash reporting services that upload user data (e.g., Firebase Crashlytics)</li>
+      <li>Third-party data collection or telemetry SDKs</li>
+      <li>Session recording, heatmaps, or interaction tracking tools</li>
+    </ul>
+  </section>
+
+  <!-- 3. Health Data -->
+  <section>
+    <h2><span class="num">3</span>Health &amp; Physiological Data</h2>
+    <p>My BP Diary handles sensitive health information. We are committed to the following practices in full compliance with Apple App Store Review Guidelines and applicable privacy regulations:</p>
+    <ul>
+      <li>Health data (blood pressure, pulse, timestamps, and associated notes) is <strong>never</strong> collected by the developer</li>
+      <li>Health data is <strong>never</strong> used for advertising, marketing, or sale to third parties</li>
+      <li>Health data is <strong>never</strong> disclosed to third parties for any purpose other than as required by law</li>
+      <li>Health data is processed solely on your device or via Apple's encrypted CloudKit infrastructure</li>
+    </ul>
+  </section>
+
+  <!-- 4. Data Storage -->
+  <section>
+    <h2><span class="num">4</span>How Data Is Stored</h2>
+
+    <div class="info-card">
+      <p class="card-title">💾 Local Storage — Apple SwiftData</p>
+      <p>All blood pressure and pulse readings you enter are stored locally on your device using Apple SwiftData. This data never leaves your device through any channel controlled by the developer. No external servers are involved in storing health records.</p>
+    </div>
+
+    <div class="info-card">
+      <p class="card-title">☁️ iCloud Sync — Apple CloudKit</p>
+      <p>If you are signed into an Apple ID with iCloud enabled, your health records may be synchronized across your devices via Apple CloudKit. This synchronization is:</p>
+      <ul>
+        <li>End-to-end encrypted and managed entirely by Apple</li>
+        <li>Governed by <a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank">Apple's Privacy Policy</a></li>
+        <li>Inaccessible to the developer at all times</li>
+      </ul>
+      <p>You can disable iCloud synchronization at any time from your device's Settings app.</p>
+    </div>
+
+    <div class="info-card">
+      <p class="card-title">🔐 App Preferences — Device Local Storage</p>
+      <p>A single boolean flag indicating whether you have purchased the Pro version is stored locally on your device using platform SharedPreferences. This preference contains no health, financial, or personally identifiable information and is used solely to restore your purchase status.</p>
+    </div>
+  </section>
+
+  <!-- 5. Third-Party Services -->
+  <section>
+    <h2><span class="num">5</span>Third-Party Services</h2>
+    <p>My BP Diary integrates only the following Apple-provided services, each governed by <a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank">Apple's Privacy Policy</a>:</p>
+
+    <div class="info-card">
+      <p class="card-title">🛒 Apple App Store In-App Purchase (IAP)</p>
+      <p>Purchases of the Pro version upgrade and voluntary support contributions ("Buy Me a Coffee") are processed exclusively through Apple's App Store payment infrastructure. The developer receives no credit card numbers, payment account details, or any financial information from these transactions. All IAP receipts are verified through Apple's servers.</p>
+    </div>
+
+    <div class="info-card">
+      <p class="card-title">☁️ Apple iCloud / CloudKit</p>
+      <p>As described in Section 4, CloudKit synchronization is an Apple service. The developer does not operate any backend servers and cannot access CloudKit data belonging to any user.</p>
+    </div>
+
+    <p style="margin-top: 14px;">No other third-party SDKs, analytics libraries, advertising networks, or external APIs are integrated into this application.</p>
+  </section>
+
+  <!-- 6. Feedback -->
+  <section>
+    <h2><span class="num">6</span>Feedback Communications</h2>
+    <p>When you use the in-app feedback feature to send an email, your email address and the content of your message will be used <strong>solely</strong> to respond to your inquiry and to improve the application. This information is not shared with any third party.</p>
+    <p>This communication occurs entirely through your personal email client on your device. No data is sent to or stored on developer-operated servers.</p>
+  </section>
+
+  <!-- 7. Children's Privacy -->
+  <section>
+    <h2><span class="num">7</span>Children's Privacy</h2>
+    <p>My BP Diary is not directed at children under the age of 13. We do not knowingly collect personal information from children. Since the application does not collect any personal data from any user, children's information is likewise never collected, stored, or transmitted.</p>
+    <p>If you believe a child has provided personal information through feedback communications, please contact us immediately at the address below so we can take appropriate action.</p>
+  </section>
+
+  <!-- 8. Your Rights and Choices -->
+  <section>
+    <h2><span class="num">8</span>Your Rights &amp; Choices</h2>
+    <p>Because all health data is stored locally on your device, you retain full control at all times:</p>
+    <ul>
+      <li><strong>Delete individual records</strong> — within the application at any time</li>
+      <li><strong>Delete all data</strong> — by uninstalling the application from your device</li>
+      <li><strong>Disable iCloud sync</strong> — via iOS Settings &gt; [Your Name] &gt; iCloud &gt; Apps Using iCloud</li>
+      <li><strong>Request refunds</strong> — through Apple's standard IAP refund process at <a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a></li>
+    </ul>
+    <p>If you are located in the European Economic Area (EEA), California, or other jurisdictions with applicable data protection laws, please note that since we do not collect personal data, data subject rights such as access, rectification, and erasure are exercised directly through your device's operating system controls.</p>
+  </section>
+
+  <!-- 9. Data Security -->
+  <section>
+    <h2><span class="num">9</span>Data Security</h2>
+    <p>The security of your health data is of paramount importance. Because we do not transmit or store your data on external servers, the primary security layer is your device's own operating system, which includes:</p>
+    <ul>
+      <li>iOS device encryption (AES-256) when your device is locked</li>
+      <li>Apple's Secure Enclave for biometric authentication</li>
+      <li>Apple CloudKit's end-to-end encryption for synced data</li>
+    </ul>
+    <p>We strongly encourage you to use a strong passcode and enable Face ID/Touch ID on your device to protect access to your health information.</p>
+  </section>
+
+  <!-- 10. Changes to This Policy -->
+  <section>
+    <h2><span class="num">10</span>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Any changes will be reflected by updating the "Effective Date" at the top of this page. We encourage you to review this policy periodically.</p>
+    <p>Your continued use of My BP Diary after any modifications to this Privacy Policy constitutes your acceptance of the updated terms.</p>
+  </section>
+
+  <!-- 11. Contact Us -->
+  <section>
+    <h2><span class="num">11</span>Contact Us</h2>
+    <div class="contact-block">
+      <div class="contact-icon">✉️</div>
+      <h3>Questions or Concerns?</h3>
+      <p>If you have any questions about this Privacy Policy or<br>our data practices, please reach out to us.</p>
+      <a class="email-btn" href="mailto:tuna.ryu.dev+ios@gmail.com">tuna.ryu.dev+ios@gmail.com</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Independent Developer &nbsp;·&nbsp; My BP Diary (我的血壓日記)</p>
+    <p style="margin-top: 6px;">
+      <a href="privacy-zh.html">繁體中文版</a>
+    </p>
+  </footer>
+
+</div><!-- /container -->
+</body>
+</html>

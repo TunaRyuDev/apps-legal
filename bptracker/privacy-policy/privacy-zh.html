@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>隱私權政策 — 我的血壓日記</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #ffffff;
+      --surface:    #f5f5f7;
+      --border:     #d2d2d7;
+      --text-h:     #1d1d1f;
+      --text-body:  #3a3a3c;
+      --text-muted: #6e6e73;
+      --accent:     #0066cc;
+      --accent-bg:  #e8f0fb;
+      --chip-bg:    #e8f5e9;
+      --chip-text:  #1b5e20;
+      --radius:     16px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text-body);
+      font-family: -apple-system, BlinkMacSystemFont, 'PingFang TC', 'Noto Sans TC', sans-serif;
+      font-size: 17px;
+      line-height: 1.85;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── 頂部橫幅 ─────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, #1d2b4f 0%, #0a6cbc 100%);
+      padding: 56px 24px 52px;
+      text-align: center;
+      color: #fff;
+    }
+    .hero .icon {
+      font-size: 52px;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .hero h1 {
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    .hero p {
+      font-size: 15px;
+      opacity: 0.8;
+      margin-bottom: 4px;
+    }
+
+    /* ── 主文區 ────────────────────────────── */
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* ── 安全保證醒目框 ─────────────────────── */
+    .guarantee {
+      background: var(--chip-bg);
+      border-left: 5px solid #2e7d32;
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      margin-bottom: 40px;
+    }
+    .guarantee .g-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--chip-text);
+      margin-bottom: 10px;
+    }
+    .guarantee ul {
+      padding-left: 24px;
+    }
+    .guarantee ul li {
+      color: var(--chip-text);
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    /* ── 章節 ──────────────────────────────── */
+    section {
+      margin-bottom: 40px;
+    }
+    section h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-h);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    section h2 .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    p { margin-bottom: 14px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      padding-left: 24px;
+      margin-bottom: 14px;
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    /* ── 資訊卡片 ──────────────────────────── */
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      margin: 14px 0;
+    }
+    .info-card .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-h);
+      margin-bottom: 8px;
+    }
+    .info-card p {
+      font-size: 15px;
+      color: var(--text-body);
+      margin-bottom: 0;
+    }
+
+    /* ── 重要提示框 ─────────────────────────── */
+    .callout {
+      background: var(--accent-bg);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      margin: 14px 0;
+    }
+    .callout p { font-size: 15px; color: #004499; margin-bottom: 0; }
+
+    /* ── 聯絡區塊 ──────────────────────────── */
+    .contact-block {
+      text-align: center;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 24px;
+    }
+    .contact-block .contact-icon { font-size: 40px; margin-bottom: 12px; }
+    .contact-block h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; color: var(--text-h); }
+    .contact-block p { font-size: 15px; color: var(--text-muted); }
+    .contact-block a {
+      display: inline-block;
+      margin-top: 16px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      padding: 13px 28px;
+      border-radius: 980px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .contact-block a:hover { background: #004ea8; }
+
+    /* ── 頁尾 ──────────────────────────────── */
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    /* ── 語言切換 ──────────────────────────── */
+    .lang-switch {
+      text-align: right;
+      margin-bottom: 24px;
+    }
+    .lang-switch a {
+      font-size: 14px;
+      color: var(--accent);
+      text-decoration: none;
+      border: 1px solid var(--accent);
+      padding: 5px 14px;
+      border-radius: 980px;
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 24px; }
+      .container { padding: 28px 18px 64px; }
+      section h2 { font-size: 19px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 頂部橫幅 -->
+<div class="hero">
+  <span class="icon">🩺</span>
+  <h1>隱私權政策</h1>
+  <p>我的血壓日記 — My BP Diary</p>
+  <p>個人獨立開發者 · 生效日期：2026 年 3 月 29 日</p>
+</div>
+
+<div class="container">
+
+  <!-- 語言切換 -->
+  <div class="lang-switch">
+    <a href="privacy-en.html">English Version</a>
+  </div>
+
+  <!-- 安全保證 -->
+  <div class="guarantee">
+    <p class="g-title">✅ 我們對您的鄭重承諾</p>
+    <ul>
+      <li>我們<strong>絕對不會</strong>收集您的血壓或脈搏等健康數據</li>
+      <li>所有生理資料<strong>僅存於您的裝置與您的 iCloud 帳號中</strong></li>
+      <li>開發者<strong>技術上無法存取</strong>您的任何個人資訊</li>
+    </ul>
+  </div>
+
+  <!-- 1. 關於本政策 -->
+  <section>
+    <h2><span class="num">1</span>關於本政策</h2>
+    <p>「我的血壓日記」（以下簡稱「本應用程式」）由一位個人獨立開發者所開發，旨在協助您輕鬆記錄與追蹤血壓變化。</p>
+    <p>本隱私權政策說明我們如何（或者更重要的是，<strong>如何不</strong>）處理您的個人資訊，並詳述本應用程式對您的資料保護承諾。</p>
+  </section>
+
+  <!-- 2. 我們收集的資料 -->
+  <section>
+    <h2><span class="num">2</span>我們收集的資料</h2>
+    <div class="callout">
+      <p>📌 <strong>本應用程式不收集任何使用者個人資料。</strong>您輸入的血壓、脈搏、日期及備註等所有健康資訊，完全留在您的裝置上，開發者無法存取。</p>
+    </div>
+    <p>本應用程式<strong>不使用</strong>以下任何服務：</p>
+    <ul>
+      <li>廣告追蹤或行為分析工具</li>
+      <li>崩潰報告服務（如 Firebase Crashlytics）</li>
+      <li>第三方數據分析 SDK</li>
+      <li>用戶行為追蹤或熱點分析</li>
+    </ul>
+  </section>
+
+  <!-- 3. 資料的儲存方式 -->
+  <section>
+    <h2><span class="num">3</span>資料的儲存方式</h2>
+
+    <div class="info-card">
+      <p class="card-title">💾 本地儲存（SwiftData）</p>
+      <p>您輸入的所有血壓與脈搏記錄，透過 Apple SwiftData 技術儲存於您的 iPhone 或 iPad 本機。資料不經過任何外部伺服器，完全在您的裝置內處理。</p>
+    </div>
+
+    <div class="info-card">
+      <p class="card-title">☁️ iCloud 同步（CloudKit）</p>
+      <p>若您的裝置已登入 Apple ID 並開啟 iCloud，資料可透過 Apple CloudKit 在您的多部裝置間同步。這個同步由 <strong>Apple 的加密基礎設施</strong>負責管理，開發者無法讀取或存取 CloudKit 中的任何內容。</p>
+    </div>
+
+    <div class="info-card">
+      <p class="card-title">🔐 應用程式設定（SharedPreferences）</p>
+      <p>僅有「是否已購買正式版」此一旗標狀態，會儲存於裝置本機的 SharedPreferences。此資訊不含任何健康或個人識別資料，僅用於還原您的購買狀態。</p>
+    </div>
+  </section>
+
+  <!-- 4. 第三方服務 -->
+  <section>
+    <h2><span class="num">4</span>第三方服務</h2>
+    <p>本應用程式僅使用以下由 Apple 管理的第三方服務，且均受 <a href="https://www.apple.com/legal/privacy/tw/" target="_blank">Apple 隱私權政策</a>規範：</p>
+
+    <div class="info-card">
+      <p class="card-title">🛒 App Store 應用程式內購買（IAP）</p>
+      <p>「升級正式版」與「請作者喝咖啡」等付費功能，均透過 Apple App Store 的安全付款機制處理。開發者<strong>完全無法</strong>取得您的信用卡號、付款帳戶或任何財務資訊。</p>
+    </div>
+
+    <div class="info-card">
+      <p class="card-title">☁️ Apple iCloud / CloudKit</p>
+      <p>如前所述，iCloud 同步功能完全由 Apple 管理，開發者不持有伺服器，亦不接觸任何同步中的資料。</p>
+    </div>
+  </section>
+
+  <!-- 5. 意見回饋 -->
+  <section>
+    <h2><span class="num">5</span>意見回饋</h2>
+    <p>當您透過應用程式內的意見回饋功能發送 Email 時，您所提供的姓名、Email 地址及建議內容，將<strong>僅用於回覆您的提問或改善應用程式</strong>，不會與任何第三方共享。</p>
+    <p>這份通訊完全透過您的個人 Email 應用程式進行，我們不設置自動收集的伺服器端點。</p>
+  </section>
+
+  <!-- 6. 兒童隱私 -->
+  <section>
+    <h2><span class="num">6</span>兒童隱私</h2>
+    <p>本應用程式並非專為兒童設計，且由於我們不收集任何資料，13 歲以下兒童的資訊同樣不會被收集或儲存。</p>
+  </section>
+
+  <!-- 7. 您的權利 -->
+  <section>
+    <h2><span class="num">7</span>您的數據控制權</h2>
+    <p>由於所有資料均儲存於您自己的裝置，您擁有完整的控制權：</p>
+    <ul>
+      <li><strong>刪除資料</strong>：可於應用程式內逐筆刪除記錄，或直接解除安裝本應用程式</li>
+      <li><strong>停用 iCloud 同步</strong>：可於 iPhone「設定 > Apple ID > iCloud」中停用本應用程式的 iCloud 存取</li>
+      <li><strong>退款</strong>：如對購買有疑義，請依 Apple 的退款政策處理</li>
+    </ul>
+  </section>
+
+  <!-- 8. 政策更新 -->
+  <section>
+    <h2><span class="num">8</span>本政策的更新</h2>
+    <p>如本隱私權政策有任何變更，我們將在本頁面以新的「生效日期」標示更新內容。建議您定期查閱本政策。繼續使用本應用程式，即表示您同意最新版本的政策內容。</p>
+  </section>
+
+  <!-- 9. 聯絡我們 -->
+  <section>
+    <h2><span class="num">9</span>聯絡我們</h2>
+    <div class="contact-block">
+      <div class="contact-icon">✉️</div>
+      <h3>有任何問題嗎？</h3>
+      <p>如果您對本隱私權政策或資料處理方式有任何疑問，<br>歡迎隨時透過 Email 與我們聯繫。</p>
+      <a href="mailto:tuna.ryu.dev+ios@gmail.com">tuna.ryu.dev+ios@gmail.com</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 個人獨立開發者 · 我的血壓日記 (My BP Diary)</p>
+    <p style="margin-top: 6px;">
+      <a href="privacy-en.html">English Version</a>
+    </p>
+  </footer>
+
+</div><!-- /container -->
+</body>
+</html>
