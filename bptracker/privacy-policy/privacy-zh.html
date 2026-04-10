@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>隱私權政策 — 我的血壓日記</title>
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="../main.css">
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'PingFang TC', 'Noto Sans TC', sans-serif;
@@ -76,12 +76,18 @@
 
     <div class="info-card">
       <p class="card-title">☁️ iCloud 同步（CloudKit）</p>
-      <p>若您的裝置已登入 Apple IDbing 開啟 iCloud，資料可透過 Apple CloudKit 在您的多部裝置間同步。這個同步由 <strong>Apple 的加密基礎設施</strong>負責管理，開發者無法讀取或存取 CloudKit 中的任何內容。</p>
+      <p>若您的裝置已登入 Apple ID 並開啟 iCloud，資料可透過 Apple CloudKit 在您的多部裝置間同步。這個同步由 <strong>Apple 的加密基礎設施</strong>負責管理，開發者無法讀取或存取 CloudKit 中的任何內容。</p>
     </div>
 
     <div class="info-card">
-      <p class="card-title">🔐 應用程式設定（SharedPreferences）</p>
-      <p>僅有「是否已購買正式版」此一旗標狀態，會儲存於裝置本機的 SharedPreferences。此資訊不含任何健康或個人識別資料，僅用於還原您的購買狀態。</p>
+      <p class="card-title">🔐 應用程式偏好設定 (Local Preferences)</p>
+      <p>本 App 使用裝置內建的輕量儲存技術（如 SharedPreferences）來儲存基本的操作狀態與設定偏好。這些資訊僅儲存於您的裝置本地端，包含：</p>
+      <ul>
+        <li><strong>功能解鎖狀態</strong>：紀錄您是否已購買正式版，以便在開啟 App 時提供完整服務。</li>
+        <li><strong>政策同意紀錄</strong>：紀錄您是否已閱讀並同意隱私權政策與使用條款。</li>
+        <li><strong>介面設定</strong>：例如語系選擇或顯示偏好。</li>
+      </ul>
+      <p><strong>重要聲明</strong>：這些偏好設定不包含任何血壓、脈搏等健康數據，亦不包含任何可識別個人身分的資訊。</p>
     </div>
   </section>
 
@@ -119,7 +125,7 @@
     <h2><span class="num">7</span>您的數據控制權</h2>
     <p>由於所有資料均儲存於您自己的裝置，您擁有完整的控制權：</p>
     <ul>
-      <li><strong>刪除資料</strong>：可於應用程式內逐筆刪除記錄，或直接解除安裝本應用程式</li>
+      <li><strong>刪除資料</strong>：可於應用程式內逐筆刪除記錄、透過「設定」清除所有資料，或直接解除安裝本應用程式</li>
       <li><strong>停用 iCloud 同步</strong>：可於 iPhone「設定 > Apple ID > iCloud」中停用本應用程式的 iCloud 存取</li>
       <li><strong>退款</strong>：如對購買有疑義，請依 Apple 的退款政策處理</li>
     </ul>
