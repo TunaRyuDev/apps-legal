@@ -50,11 +50,11 @@
     <div class="callout">
       <p>📌 <strong>My BP Diary does not collect, store on remote servers, or transmit any personal health data.</strong> All blood pressure readings, pulse rates, dates, and notes you enter remain entirely on your device. The developer has no access to this information at any time.</p>
     </div>
-    <p>This application does <strong>not</strong> use any of the following:</p>
+    <p>Except for infrastructure strictly required for purchase validation, this application does <strong>not</strong> contain any third-party services. Specifically, we do not use:</p>
     <ul>
       <li>Advertising tracking or behavioral analytics (e.g., Meta Pixel, Google Analytics)</li>
       <li>Crash reporting services that upload user data (e.g., Firebase Crashlytics)</li>
-      <li>Third-party data collection or telemetry SDKs</li>
+      <li>Third-party telemetry or general data collection SDKs</li>
       <li>Session recording, heatmaps, or interaction tracking tools</li>
     </ul>
   </section>
@@ -106,19 +106,22 @@
   <!-- 5. Third-Party Services -->
   <section>
     <h2><span class="num">5</span>Third-Party Services</h2>
-    <p>My BP Diary integrates only the following Apple-provided services, each governed by <a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank">Apple's Privacy Policy</a>:</p>
+    <p>My BP Diary integrates only the following essential infrastructure services:</p>
 
     <div class="info-card">
       <p class="card-title">🛒 Apple App Store In-App Purchase (IAP)</p>
-      <p>Purchases of the Pro version upgrade and voluntary support contributions ("Buy Me a Coffee") are processed exclusively through Apple's App Store payment infrastructure. The developer receives no credit card numbers, payment account details, or any financial information from these transactions. All IAP receipts are verified through Apple's servers.</p>
+      <p>Purchases of the Pro version upgrade and voluntary support contributions ("Buy Me a Coffee") are processed exclusively through Apple's App Store payment infrastructure. The developer receives no credit card numbers, payment account details, or any financial information from these transactions. All IAP receipts are verified through Apple's servers. Governed by <a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank">Apple's Privacy Policy</a>.</p>
     </div>
 
     <div class="info-card">
       <p class="card-title">☁️ Apple iCloud / CloudKit</p>
-      <p>As described in Section 4, CloudKit synchronization is an Apple service. The developer does not operate any backend servers and cannot access CloudKit data belonging to any user.</p>
+      <p>As described in Section 4, CloudKit synchronization is an Apple service. The developer does not operate any backend servers and cannot access CloudKit data belonging to any user. Governed by <a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank">Apple's Privacy Policy</a>.</p>
     </div>
 
-    <p style="margin-top: 14px;">No other third-party SDKs, analytics libraries, advertising networks, or external APIs are integrated into this application.</p>
+    <div class="info-card">
+      <p class="card-title">🧾 RevenueCat (Purchase Management)</p>
+      <p>We use RevenueCat to securely validate and manage App Store purchase receipts. RevenueCat processes only anonymous App User IDs, basic device metadata, and purchase history. <strong>RevenueCat does not access, collect, or link to any of your blood pressure or health data.</strong> For details, please refer to the <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy Policy</a>.</p>
+    </div>
   </section>
 
   <!-- 6. Feedback -->
