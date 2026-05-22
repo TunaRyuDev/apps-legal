@@ -13,7 +13,7 @@
   <span class="icon">🩺</span>
   <h1>Privacy Policy</h1>
   <p>My BP Diary</p>
-  <p>Independent Developer &nbsp;·&nbsp; Effective Date: March 29, 2026</p>
+  <p>Independent Developer &nbsp;·&nbsp; Effective Date: May 22, 2026</p>
 </div>
 
 <div class="container">
@@ -32,7 +32,7 @@
     <p class="g-title">✅ Our Core Privacy Commitment</p>
     <ul>
       <li>We <strong>never</strong> collect, access, or transmit your health or medical data</li>
-      <li>All physiological data is stored <strong>exclusively on your device and your iCloud account</strong></li>
+      <li>All physiological data is stored <strong>exclusively on your device, your iCloud account, or your authorized Apple Health database</strong></li>
       <li>The developer is <strong>technically incapable</strong> of accessing any of your personal information</li>
     </ul>
   </div>
@@ -62,12 +62,13 @@
   <!-- 3. Health Data -->
   <section>
     <h2><span class="num">3</span>Health &amp; Physiological Data</h2>
-    <p>My BP Diary handles sensitive health information. We are committed to the following practices in full compliance with Apple App Store Review Guidelines and applicable privacy regulations:</p>
+    <p>My BP Diary handles sensitive health information. We are committed to the following practices in full compliance with Apple App Store Review Guidelines (including Guideline 5.1.3 for HealthKit) and applicable privacy regulations:</p>
     <ul>
       <li>Health data (blood pressure, pulse, timestamps, and associated notes) is <strong>never</strong> collected by the developer</li>
       <li>Health data is <strong>never</strong> used for advertising, marketing, or sale to third parties</li>
+      <li>Health data is <strong>never</strong> used for user profiling or any other form of behavioral tracking</li>
       <li>Health data is <strong>never</strong> disclosed to third parties for any purpose other than as required by law</li>
-      <li>Health data is processed solely on your device or via Apple's encrypted CloudKit infrastructure</li>
+      <li>Health data is processed solely on your device, in your local Apple Health app, or via Apple's encrypted CloudKit infrastructure</li>
     </ul>
   </section>
 
@@ -89,6 +90,17 @@
         <li>Inaccessible to the developer at all times</li>
       </ul>
       <p>You can disable iCloud synchronization at any time from your device's Settings app.</p>
+    </div>
+
+    <div class="info-card">
+      <p class="card-title">🍎 Apple HealthKit Integration</p>
+      <p>If you enable Apple Health integration in the App, the App will write your blood pressure and pulse measurements to the Apple Health app (HealthKit) on your device. This integration is:</p>
+      <ul>
+        <li><strong>Stored Locally</strong>: All data is saved directly into Apple's secure, system-encrypted health database on your device.</li>
+        <li><strong>No External Transmission</strong>: The Developer does not upload, transmit, or share your HealthKit data with any third-party servers.</li>
+        <li><strong>Strict Compliance</strong>: We commit to never using this health data for any advertising, marketing, tracking, or profiling purposes.</li>
+      </ul>
+      <p>You can manage or completely disable this sharing at any time, as detailed in Section 8 (Your Rights &amp; Choices).</p>
     </div>
 
     <div class="info-card">
@@ -122,6 +134,11 @@
       <p class="card-title">🧾 RevenueCat (Purchase Management)</p>
       <p>We use RevenueCat to securely validate and manage App Store purchase receipts. RevenueCat processes only anonymous App User IDs, basic device metadata, and purchase history. <strong>RevenueCat does not access, collect, or link to any of your blood pressure or health data.</strong> For details, please refer to the <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy Policy</a>.</p>
     </div>
+
+    <div class="info-card">
+      <p class="card-title">🍎 Apple HealthKit (System Integration)</p>
+      <p>HealthKit is an integrated iOS system service provided by Apple for securing and consolidating health data. The integration with HealthKit is governed by <a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank">Apple's Privacy Policy</a>. The App does not share your HealthKit data with any third parties.</p>
+    </div>
   </section>
 
   <!-- 6. Feedback -->
@@ -146,6 +163,7 @@
       <li><strong>Delete individual records</strong> — within the application at any time</li>
       <li><strong>Delete all data</strong> — instantly via the app settings, or by uninstalling the application from your device</li>
       <li><strong>Disable iCloud sync</strong> — via iOS Settings &gt; [Your Name] &gt; iCloud &gt; Apps Using iCloud</li>
+      <li><strong>Manage Apple Health Permissions</strong> — you can view, enable, or revoke the App's read/write permissions for health data at any time via the iOS Settings app (Settings &gt; Privacy &amp; Security &gt; Health &gt; My BP Diary) or directly in the Apple Health app</li>
       <li><strong>Request refunds</strong> — through Apple's standard IAP refund process at <a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a></li>
     </ul>
     <p>If you are located in the European Economic Area (EEA), California, or other jurisdictions with applicable data protection laws, please note that since we do not collect personal data, data subject rights such as access, rectification, and erasure are exercised directly through your device's operating system controls.</p>
