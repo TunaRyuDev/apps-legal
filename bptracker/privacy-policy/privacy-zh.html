@@ -15,7 +15,6 @@
 </head>
 <body>
 
-<!-- 頂部橫幅 -->
 <div class="hero">
   <span class="icon">🩺</span>
   <h1>隱私權政策</h1>
@@ -25,7 +24,6 @@
 
 <div class="container">
 
-  <!-- 語言切換選單 -->
   <div class="lang-selector-container">
     <select class="lang-dropdown" onchange="window.location.href=this.value">
       <option value="privacy-en.html">English</option>
@@ -33,39 +31,35 @@
     </select>
   </div>
 
-  <!-- 安全保證 -->
   <div class="guarantee">
     <p class="g-title">✅ 我們對您的鄭重承諾</p>
     <ul>
-      <li>我們<strong>絕對不會</strong>收集您的血壓或脈搏等健康數據</li>
+      <li>我們<strong>絕對不會</strong>收集您的血壓、脈搏等敏感健康數據</li>
       <li>所有生理資料<strong>僅存於您的裝置、您的 iCloud 帳號或您授權的 Apple Health 數據庫中</strong></li>
-      <li>開發者<strong>技術上無法存取</strong>您的任何個人資訊</li>
+      <li>開發者<strong>技術上無法存取</strong>您的任何個人資訊與健康隱私</li>
     </ul>
   </div>
 
-  <!-- 1. 關於本政策 -->
   <section>
     <h2><span class="num">1</span>關於本政策</h2>
-    <p>「My BP Diary」（以下簡稱「本應用程式」）由一位個人獨立開發者所開發，旨在協助您輕鬆記錄與追蹤血壓變化。</p>
+    <p>「My BP Diary」（以下簡稱「本應用程式」）由一位個人獨立開發者所開發，旨在協助您輕鬆記錄與追蹤血壓與脈搏變化。</p>
     <p>本隱私權政策說明我們如何（或者更重要的是，<strong>如何不</strong>）處理您的個人資訊，並詳述本應用程式對您的資料保護承諾。</p>
   </section>
 
-  <!-- 2. 我們收集的資料 -->
   <section>
     <h2><span class="num">2</span>我們收集的資料</h2>
     <div class="callout">
-      <p>📌 <strong>本應用程式不收集任何使用者個人資料。</strong>您輸入的血壓、脈搏、日期及備註等所有健康資訊，完全留在您的裝置上，開發者無法存取。</p>
+      <p>📌 <strong>本應用程式不收集任何使用者的健康、生理或敏感個人身分資料。</strong>您輸入的血壓、脈搏、日期及備註等所有健康資訊，完全留在您的裝置或您授權的系統資料庫中，開發者無法存取。唯一處理的非敏感資料僅限於維持 App 功能（如 PRO 版內購驗證）所需之必要基礎設施數據。</p>
     </div>
-    <p>除了用於驗證購買的基礎設施之外，本應用程式<strong>不包含</strong>以下任何服務：</p>
+    <p>除了用於驗證購買與解鎖 PRO 功能的必要基礎設施之外，本應用程式<strong>不包含</strong>以下任何服務：</p>
     <ul>
-      <li>廣告追蹤或行為分析工具</li>
+      <li>第三方廣告追蹤或行為分析工具</li>
       <li>崩潰報告服務（如 Firebase Crashlytics）</li>
       <li>第三方數據分析 SDK</li>
       <li>用戶行為追蹤或熱點分析</li>
     </ul>
   </section>
 
-  <!-- 3. 資料的儲存方式 -->
   <section>
     <h2><span class="num">3</span>資料的儲存方式</h2>
 
@@ -76,7 +70,7 @@
 
     <div class="info-card">
       <p class="card-title">☁️ iCloud 同步（CloudKit）</p>
-      <p>若您的裝置已登入 Apple ID 並開啟 iCloud，資料可透過 Apple CloudKit 在您的多部裝置間同步。這個同步由 <strong>Apple 的加密基礎設施</strong>負責管理，開發者無法讀取或存取 CloudKit 中的任何內容。</p>
+      <p>若您的裝置已登入 Apple ID並開啟 iCloud，資料可透過 Apple CloudKit 在您的多部裝置間同步。這個同步由 <strong>Apple 的加密基礎設施</strong>負責管理，開發者無法讀取或存取 CloudKit 中的任何內容。</p>
     </div>
 
     <div class="info-card">
@@ -98,18 +92,17 @@
         <li><strong>政策同意紀錄</strong>：紀錄您是否已閱讀並同意隱私權政策與使用條款。</li>
         <li><strong>介面設定</strong>：例如語系選擇或顯示偏好。</li>
       </ul>
-      <p><strong>重要聲明</strong>：這些偏好設定不包含任何血壓、脈搏等健康數據，亦不包含任何可識別個人身分的資訊。</p>
+      <p><strong>重要聲明</strong>：這些偏好設定不包含任何血壓與脈搏等健康數據，亦不包含任何可識別個人身分的資訊。</p>
     </div>
   </section>
 
-  <!-- 4. 第三方服務 -->
   <section>
     <h2><span class="num">4</span>第三方服務</h2>
     <p>本應用程式僅使用必要之基礎設施服務，包含以下 Apple 提供之服務（受 <a href="https://www.apple.com/legal/privacy/tw/" target="_blank">Apple 隱私權政策</a>規範）以及 RevenueCat：</p>
 
     <div class="info-card">
       <p class="card-title">🛒 App Store 應用程式內購買（IAP）</p>
-      <p>「升級正式版」與「請作者喝咖啡」等付費功能，均透過 Apple App Store 的安全付款機制處理。開發者<strong>完全無法</strong>取得您的信用卡號、付款帳戶或任何財務資訊。</p>
+      <p>「升級正式版」等付費功能，均透過 Apple App Store 的安全付款機制處理。開發者<strong>完全無法</strong>取得您的信用卡號、付款帳戶或任何財務資訊。</p>
     </div>
 
     <div class="info-card">
@@ -119,7 +112,7 @@
 
     <div class="info-card">
       <p class="card-title">🧾 RevenueCat (購買驗證與管理)</p>
-      <p>我們使用 RevenueCat 來安全地驗證與管理 App Store 的購買收據。RevenueCat 僅會處理匿名的使用者識別碼（Anonymous App User IDs）、裝置基本資訊與購買紀錄。<strong>RevenueCat 絕對不會存取、收集或關聯您的任何血壓或健康資料。</strong> 詳情請參閱 <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat 隱私權政策</a>。</p>
+      <p>我們使用 RevenueCat 來安全地驗證與管理 App Store 的購買收據。在符合 App Store 隱私宣告下，RevenueCat 僅會處理隨機生成的匿名使用者識別碼（Anonymous App User IDs）、裝置基本資訊與購買紀錄，以確保跨裝置恢復正式版功能（App 功能本質）。...<strong>RevenueCat 絕對不會、也技術上無法存取、收集或關聯您的任何血壓、脈搏或健康資料。</strong> 詳情請參閱 <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat 隱私權政策</a>。</p>
     </div>
 
     <div class="info-card">
@@ -128,23 +121,20 @@
     </div>
   </section>
 
-  <!-- 5. 意見回饋 -->
   <section>
     <h2><span class="num">5</span>意見回饋</h2>
     <p>當您透過應用程式內的意見回饋功能發送 Email 時，您所提供的姓名、Email 地址及建議內容，將<strong>僅用於回覆您的提問或改善應用程式</strong>，不會與任何第三方共享。</p>
     <p>這份通訊完全透過您的個人 Email 應用程式進行，我們不設置自動收集的伺服器端點。</p>
   </section>
 
-  <!-- 6. 兒童隱私 -->
   <section>
     <h2><span class="num">6</span>兒童隱私</h2>
-    <p>本應用程式並非專為兒童設計，且由於我們不收集任何資料，13 歲以下兒童的資訊同樣不會被收集或儲存。</p>
+    <p>本應用程式並非專為兒童設計，且由於我們不收集個人健康資料，13 歲以下兒童的資訊同樣不會被額外收集或儲存。</p>
   </section>
 
-  <!-- 7. 您的權利 -->
   <section>
     <h2><span class="num">7</span>您的數據控制權</h2>
-    <p>由於所有資料均儲存於您自己的裝置，您擁有完整的控制權：</p>
+    <p>由於所有資料均儲存於您自己的裝置或授權的加密系統資料庫中，您擁有完整的控制權：</p>
     <ul>
       <li><strong>刪除資料</strong>：可於應用程式內逐筆刪除記錄、透過「設定」清除所有資料，或直接解除安裝本應用程式</li>
       <li><strong>停用 iCloud 同步</strong>：可於 iPhone「設定 > Apple ID > iCloud」中停用本應用程式的 iCloud 存取</li>
@@ -153,13 +143,11 @@
     </ul>
   </section>
 
-  <!-- 8. 政策更新 -->
   <section>
     <h2><span class="num">8</span>本政策的更新</h2>
-    <p>如本隱私權政策有任何變更，我們將在本頁面以新的「生效日期」標示更新內容。建議您定期查閱本政策。繼續使用本應用程式，即表示您同意最新版本的政策內容。</p>
+    <p>如本隱私權政策有慢速更新任何變更，我們將在本頁面以新的「生效日期」標示更新內容。建議您定期查閱本政策。繼續使用本應用程式，即表示您同意最新版本的政策內容。</p>
   </section>
 
-  <!-- 9. 聯絡我們 -->
   <section>
     <h2><span class="num">9</span>聯絡我們</h2>
     <div class="contact-block">
@@ -174,6 +162,5 @@
     <p>© 2026 個人獨立開發者 · My BP Diary</p>
   </footer>
 
-</div><!-- /container -->
-</body>
+</div></body>
 </html>
