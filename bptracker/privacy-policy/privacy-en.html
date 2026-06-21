@@ -19,7 +19,7 @@
   <span class="icon">🩺</span>
   <h1>Privacy Policy</h1>
   <p>My BP Diary</p>
-  <p>Independent Developer &nbsp;·&nbsp; Effective Date: May 22, 2026</p>
+  <p>Independent Developer &nbsp;·&nbsp; Effective Date: June 17, 2026</p>
 </div>
 
 <div class="container">
@@ -35,7 +35,7 @@
     <p class="g-title">✅ Our Core Privacy Commitment</p>
     <ul>
       <li>We <strong>never</strong> collect, access, or transmit your blood pressure or pulse rate data</li>
-      <li>All physiological data is stored <strong>exclusively on your device, your iCloud account, or your authorized Apple Health database</strong></li>
+      <li>All physiological data is stored <strong>exclusively on your device, your iCloud/Google Drive backup, or your authorized Apple Health / Android Health Connect database</strong></li>
       <li>The developer is <strong>technically incapable</strong> of accessing any of your personal health information</li>
     </ul>
   </div>
@@ -62,13 +62,13 @@
 
   <section>
     <h2><span class="num">3</span>Health &amp; Physiological Data</h2>
-    <p>My BP Diary handles sensitive physiological information. We are committed to the following practices in full compliance with Apple App Store Review Guidelines (including Guideline 5.1.3 for HealthKit) and applicable privacy regulations:</p>
+    <p>My BP Diary handles sensitive physiological information. We are committed to the following practices in full compliance with Apple App Store Review Guidelines (including Guideline 5.1.3 for HealthKit), Google Play Developer Policies (including the Health Connect Developer Policy), and applicable privacy regulations:</p>
     <ul>
       <li>Health data (blood pressure, pulse, timestamps, and associated notes) is <strong>never</strong> collected or seen by the developer.</li>
       <li>Health data is <strong>never</strong> used for advertising, marketing, or cross-app tracking purposes.</li>
       <li>Health data is <strong>never</strong> used for user profiling or any other form of automated behavioral evaluation.</li>
       <li>Health data is <strong>never</strong> disclosed or sold to third parties for any purpose whatsoever.</li>
-      <li>Health data is processed solely on your device, in your local Apple Health app, or via Apple's encrypted CloudKit infrastructure.</li>
+      <li>Health data is processed solely on your device, in your local Apple Health / Android Health Connect app, or via Apple's encrypted CloudKit infrastructure.</li>
     </ul>
   </section>
 
@@ -76,35 +76,29 @@
     <h2><span class="num">4</span>How Data Is Stored</h2>
 
     <div class="info-card">
-      <p class="card-title">💾 Local Storage — Apple SwiftData</p>
-      <p>All blood pressure and pulse readings you enter are stored locally on your device using Apple SwiftData technology. This data never leaves your device through any channel controlled by the developer. No external servers are involved in storing your health logs.</p>
+      <p class="card-title">💾 Local Storage — Apple SwiftData &amp; Jetpack Room DB</p>
+      <p>All blood pressure and pulse readings you enter are stored locally on your device using Apple SwiftData technology (on iOS) or Jetpack Room DB (on Android). This data never leaves your device through any channel controlled by the developer. No external servers are involved in storing your health logs.</p>
     </div>
 
     <div class="info-card">
-      <p class="card-title">☁️ iCloud Sync — Apple CloudKit</p>
-      <p>If you are signed into an Apple ID with iCloud enabled, your health records may be synchronized across your multiple Apple devices via Apple CloudKit. This synchronization is:</p>
-      <ul>
-        <li>End-to-end encrypted and managed entirely by Apple.</li>
-        <li>Governed by <a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank">Apple's Privacy Policy</a>.</li>
-        <li>Completely inaccessible to the developer at all times.</li>
-      </ul>
-      <p>You can disable iCloud synchronization at any time from your device's system Settings app.</p>
+      <p class="card-title">☁️ iCloud Sync &amp; Backups</p>
+      <p><strong>iOS (iCloud Sync)</strong>: If you are signed into an Apple ID with iCloud enabled, your health records may be synchronized across your multiple Apple devices via Apple CloudKit. This synchronization is end-to-end encrypted and managed entirely by Apple, governed by Apple's Privacy Policy, and completely inaccessible to the developer.</p>
+      <p><strong>Android (Backups)</strong>: On Android, your data is stored strictly locally. It does not sync across multiple devices under the developer's control. However, your local database may be backed up to your personal Google Account via Android's built-in system backup if enabled on your device.</p>
     </div>
 
     <div class="info-card">
-      <p class="card-title">🍎 Apple HealthKit Integration</p>
-      <p>If you enable Apple Health integration in the Application, the Application will write your blood pressure and pulse measurements directly to the official Apple Health app (HealthKit) on your device. This integration is:</p>
+      <p class="card-title">🩺 System Health Integrations (Apple Health &amp; Android Health Connect)</p>
+      <p>If you enable system health integration, the Application will write your blood pressure and pulse measurements directly to your device's native health database:</p>
       <ul>
-        <li><strong>Stored Locally</strong>: All data is saved directly into Apple's secure, system-encrypted health database on your device.</li>
-        <li><strong>No External Transmission</strong>: The developer does not upload, transmit, or share your HealthKit data with any external servers.</li>
-        <li><strong>Strict Compliance</strong>: We commit to never using this health data for any advertising, marketing, tracking, or profiling purposes.</li>
+        <li><strong>Apple HealthKit (iOS)</strong>: Writes data to Apple's system Health app. The developer does not transmit HealthKit data to any external servers.</li>
+        <li><strong>Android Health Connect (Android)</strong>: Writes data to Android's secure Health Connect database. We adhere strictly to the Google Play Health Connect Developer Policy, ensuring your health data is never shared with third parties or used for tracking/advertising.</li>
       </ul>
-      <p>You can manage or completely revoke this permission at any time via the system settings, as detailed in Section 8.</p>
+      <p>You can manage or completely revoke these permissions at any time via your device's system settings.</p>
     </div>
 
     <div class="info-card">
       <p class="card-title">🔐 App Preferences & Local Configuration</p>
-      <p>The Application uses local storage (such as SharedPreferences) to store basic operational states and user preferences. This data is stored strictly on your device and includes:</p>
+      <p>The Application uses local storage (such as UserDefaults or SharedPreferences) to store basic operational states and user preferences. This data is stored strictly on your device and includes:</p>
       <ul>
         <li><strong>Purchase Status</strong>: To verify your Pro version status and enable premium features locally.</li>
         <li><strong>Consent Records</strong>: To remember that you have reviewed and accepted our Privacy Policy and Terms of Use.</li>
@@ -116,26 +110,21 @@
 
   <section>
     <h2><span class="num">5</span>Third-Party Services</h2>
-    <p>My BP Diary integrates only essential core infrastructure services, including the following Apple-provided systems and RevenueCat:</p>
+    <p>My BP Diary integrates only essential core infrastructure services, including the following native systems and RevenueCat:</p>
 
     <div class="info-card">
-      <p class="card-title">🛒 Apple App Store In-App Purchase (IAP)</p>
-      <p>Purchases of the Pro version upgrade are processed exclusively through Apple's App Store payment infrastructure. The developer receives no credit card numbers, payment account details, or financial information from these transactions. All IAP receipts are verified securely through Apple's servers, governed by <a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank">Apple's Privacy Policy</a>.</p>
-    </div>
-
-    <div class="info-card">
-      <p class="card-title">☁️ Apple iCloud / CloudKit</p>
-      <p>As described in Section 4, CloudKit synchronization is an Apple service. The developer does not operate backend servers and cannot access CloudKit data belonging to any user, governed by <a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank">Apple's Privacy Policy</a>.</p>
+      <p class="card-title">🛒 App Store &amp; Google Play In-App Purchases</p>
+      <p>Purchases of the Pro version upgrade are processed exclusively through Apple's App Store payment infrastructure (on iOS) or Google Play Billing (on Android). The developer receives no credit card numbers, payment account details, or financial information from these transactions. All payments are verified securely through Apple's or Google's servers, governed by their respective privacy policies.</p>
     </div>
 
     <div class="info-card">
       <p class="card-title">🧾 RevenueCat (Purchase Management)</p>
-      <p>We use RevenueCat to securely validate and manage App Store purchase receipts. In alignment with our App Store privacy disclosures, RevenueCat processes only randomly generated anonymous App User IDs, basic device metadata, and purchase history to ensure premium features are unlocked across your devices (essential App functionality). <strong>RevenueCat does not access, collect, or link to any of your blood pressure, pulse, or health data.</strong> For details, please refer to the <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy Policy</a>.</p>
+      <p>We use RevenueCat to securely validate and manage purchase receipts and tokens for both the App Store and Google Play. RevenueCat processes only randomly generated anonymous App User IDs, basic device metadata, and purchase history to verify and unlock premium features across your devices. <strong>RevenueCat does not access, collect, or link to any of your blood pressure, pulse, or health data.</strong> For details, please refer to the <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy Policy</a>.</p>
     </div>
 
     <div class="info-card">
-      <p class="card-title">🍎 Apple HealthKit (System Integration)</p>
-      <p>HealthKit is an integrated iOS system service provided by Apple for securing and consolidating personal health metrics. The integration with HealthKit is governed by <a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank">Apple's Privacy Policy</a>. The Application does not share your HealthKit data with any third parties.</p>
+      <p class="card-title">🩺 System Health Integration Services</p>
+      <p>Apple HealthKit and Android Health Connect are secure integrated system services provided by Apple and Google, respectively. These integrations are governed by the <a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank">Apple Privacy Policy</a> and the <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>. The Application does not share health data from these services with any third parties.</p>
     </div>
   </section>
 
@@ -157,9 +146,18 @@
     <ul>
       <li><strong>Delete individual records</strong> — within the application at any time.</li>
       <li><strong>Delete all data</strong> — instantly via the app settings, or by uninstalling the application from your device.</li>
-      <li><strong>Disable iCloud sync</strong> — via iOS Settings &gt; [Your Name] &gt; iCloud &gt; Apps Using iCloud.</li>
-      <li><strong>Manage Apple Health Permissions</strong> — you can view, enable, or revoke the Application's read/write privileges for health data at any time via the iOS Settings app (Settings &gt; Privacy &amp; Security &gt; Health &gt; My BP Diary) or directly inside the Apple Health app.</li>
-      <li><strong>Request refunds</strong> — through Apple's standard IAP refund process at <a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a>.</li>
+      <li><strong>Manage Permissions &amp; Synced Services</strong>:
+        <ul>
+          <li><strong>iOS (iCloud / HealthKit)</strong>: Manage iCloud apps via iOS Settings &gt; [Your Name] &gt; iCloud. Manage Apple Health permissions via iOS Settings &gt; Privacy &amp; Security &gt; Health &gt; My BP Diary, or directly in the Apple Health app.</li>
+          <li><strong>Android (Health Connect)</strong>: Manage Health Connect permissions via Android Settings &gt; Apps &gt; My BP Diary &gt; Permissions, or directly inside the Google Health Connect app.</li>
+        </ul>
+      </li>
+      <li><strong>Request refunds</strong>:
+        <ul>
+          <li><strong>iOS</strong>: Through Apple's standard refund process at <a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a>.</li>
+          <li><strong>Android</strong>: Through the Google Play Store refund process via your Google Account purchase history.</li>
+        </ul>
+      </li>
     </ul>
     <p>If you are located in the European Economic Area (EEA), California, or other jurisdictions with applicable data protection laws, please note that since we do not harvest personal data, data subject rights such as access, rectification, and erasure are exercised directly through your device's native operating system controls.</p>
   </section>
@@ -168,11 +166,11 @@
     <h2><span class="num">9</span>Data Security</h2>
     <p>The security of your health data is of paramount importance. Because we do not transmit or store your data on external servers, the primary security layer is your device's own operating system, which includes:</p>
     <ul>
-      <li>iOS device encryption (AES-256) when your device is locked.</li>
-      <li>Apple's Secure Enclave for biometric authentication protection.</li>
-      <li>Apple CloudKit's end-to-end encryption for synced database segments.</li>
+      <li>Device encryption (iOS AES-256 / Android File-Based Encryption) when your device is locked.</li>
+      <li>Apple's Secure Enclave or Android's hardware-backed keystore for authentication protection.</li>
+      <li>Apple CloudKit's end-to-end encryption for iOS synced database segments.</li>
     </ul>
-    <p>We strongly encourage you to use a strong passcode and enable Face ID/Touch ID on your device to protect access to your health information.</p>
+    <p>We strongly encourage you to use a strong passcode and enable Face ID/Touch ID or fingerprint lock on your device to protect access to your health information.</p>
   </section>
 
   <section>
@@ -187,7 +185,10 @@
       <div class="contact-icon">✉️</div>
       <h3>Questions or Concerns?</h3>
       <p>If you have any questions about this Privacy Policy or<br>our data practices, please reach out to us.</p>
-      <a class="email-btn" href="mailto:tuna.ryu.dev+ios@gmail.com">tuna.ryu.dev+ios@gmail.com</a>
+      <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 15px;">
+        <a class="email-btn" href="mailto:tuna.ryu.dev+ios@gmail.com" style="margin: 0;">iOS Support: tuna.ryu.dev+ios@gmail.com</a>
+        <a class="email-btn" href="mailto:tuna.ryu.dev+android@gmail.com" style="margin: 0;">Android Support: tuna.ryu.dev+android@gmail.com</a>
+      </div>
     </div>
   </section>
 

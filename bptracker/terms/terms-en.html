@@ -13,7 +13,7 @@
   <span class="icon">📋</span>
   <h1>Terms of Use</h1>
   <p>My BP Diary</p>
-  <p>Independent Developer &nbsp;·&nbsp; Effective Date: May 22, 2026</p>
+  <p>Independent Developer &nbsp;·&nbsp; Effective Date: June 17, 2026</p>
 </div>
 
 <div class="container">
@@ -61,8 +61,8 @@
     <ul>
       <li>Record and track your own blood pressure measurements and pulse readings</li>
       <li>View personal health trends over time for your own reference</li>
-      <li>Sync data across your own Apple devices via iCloud</li>
-      <li>Synchronize and store your blood pressure and pulse readings in the Apple Health app (HealthKit) for centralized personal tracking</li>
+      <li>Sync data across your own Apple devices via iCloud (iOS only)</li>
+      <li>Synchronize and store your blood pressure and pulse readings in the Apple Health app (HealthKit) or Android Health Connect for centralized personal tracking</li>
     </ul>
   </section>
 
@@ -90,21 +90,21 @@
     <h2><span class="num">5</span>Data Storage &amp; Your Responsibility</h2>
 
     <div class="info-card">
-      <p class="card-title">💾 Local, iCloud &amp; Apple Health Data</p>
-      <p>All health data you enter is stored on your device (via Apple SwiftData) and optionally synced to iCloud (via Apple CloudKit) or written to Apple Health (HealthKit). <strong>You are solely responsible for the backup, accuracy, and security of this data.</strong></p>
+      <p class="card-title">💾 Local, iCloud &amp; System Health Data</p>
+      <p>All health data you enter is stored on your device (via Apple SwiftData or Jetpack Room DB) and optionally synced to iCloud (via Apple CloudKit on iOS) or written to Apple Health (HealthKit) or Android Health Connect. <strong>You are solely responsible for the backup, accuracy, and security of this data.</strong></p>
     </div>
 
     <div class="info-card">
-      <p class="card-title">🍎 Apple Health Data Disclaimer</p>
-      <p>When you enable Apple Health integration, your measurements are written directly to Apple's system Health app. The storage, security, and backup of this data are managed entirely by Apple's system infrastructure. The Developer assumes no responsibility or liability for any data loss, synchronization discrepancies, permission resets, or manual deletions occurring within the Apple Health app.</p>
+      <p class="card-title">🩺 System Health Data Disclaimer</p>
+      <p>When you enable Apple Health or Android Health Connect integration, your measurements are written directly to the respective system health app database. The storage, security, and backup of this data are managed entirely by Apple or Google's system infrastructure. The Developer assumes no responsibility or liability for any data loss, synchronization discrepancies, permission resets, or manual deletions occurring within Apple Health or Android Health Connect.</p>
     </div>
 
     <div class="info-card">
       <p class="card-title">⚠️ Data Loss Disclaimer</p>
-      <p>The Developer is not responsible for any loss of data caused by device failure, iOS updates, iCloud outages, or accidental deletion. The Developer strongly recommends maintaining independent backups of important health records with your healthcare provider.</p>
+      <p>The Developer is not responsible for any loss of data caused by device failure, iOS or Android updates, iCloud outages, Google Account backup failures, or accidental deletion. The Developer strongly recommends maintaining independent backups of important health records with your healthcare provider.</p>
     </div>
 
-    <p>The Developer is technically incapable of accessing, recovering, or restoring your data, as it is stored exclusively within your device and Apple's infrastructure.</p>
+    <p>The Developer is technically incapable of accessing, recovering, or restoring your data, as it is stored exclusively within your device and Apple/Google's secure infrastructure.</p>
   </section>
 
   <!-- 6. In-App Purchases -->
@@ -115,9 +115,9 @@
       <li><strong>Pro Version Upgrade</strong> — a one-time, non-consumable purchase that unlocks additional features</li>
       <li><strong>Buy Me a Coffee</strong> — voluntary consumable contributions to support ongoing development (provide no additional functionality)</li>
     </ul>
-    <p>All transactions are processed by Apple's App Store payment infrastructure. The Developer has no access to your payment details. Refund requests must be submitted directly to Apple through <a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a>.</p>
-    <p>All in-app purchases and your use of the App are governed by the standard <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Apple End User License Agreement (EULA)</a>.</p>
-    <p>All purchases are final once processed by Apple, subject to Apple's refund policies. The "Buy Me a Coffee" purchases are voluntary donations and are non-refundable by the Developer.</p>
+    <p>All transactions are processed by Apple's App Store payment infrastructure or Google Play Billing. The Developer has no access to your payment details. Refund requests must be submitted directly to Apple through <a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a> (on iOS) or Google Play through your Google Account purchase history (on Android).</p>
+    <p>All in-app purchases and your use of the App are governed by the standard <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Apple End User License Agreement (EULA)</a> or the Google Play Terms of Service / standard Android EULA.</p>
+    <p>All purchases are final once processed, subject to platform refund policies. The "Buy Me a Coffee" purchases are voluntary donations and are non-refundable by the Developer.</p>
   </section>
 
   <!-- 7. Intellectual Property -->
@@ -158,7 +158,10 @@
       <div class="contact-icon">✉️</div>
       <h3>Questions about these Terms?</h3>
       <p>Please reach out to us with any questions<br>about these Terms of Use.</p>
-      <a class="email-btn" href="mailto:tuna.ryu.dev+ios@gmail.com">tuna.ryu.dev+ios@gmail.com</a>
+      <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 15px;">
+        <a class="email-btn" href="mailto:tuna.ryu.dev+ios@gmail.com" style="margin: 0;">iOS Support: tuna.ryu.dev+ios@gmail.com</a>
+        <a class="email-btn" href="mailto:tuna.ryu.dev+android@gmail.com" style="margin: 0;">Android Support: tuna.ryu.dev+android@gmail.com</a>
+      </div>
     </div>
   </section>
 
